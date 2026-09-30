@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EIGHTEETH Pakistan | Advanced Dental Technology & Equipment</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dental: {
+                            50: '#e6f9ff',
+                            100: '#b3f0ff',
+                            500: '#00b4d8',
+                            650: '#0077b6',
+                            900: '#03045e',
+                            dark: '#0a1128'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 3s ease-in-out infinite alternate',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 15px rgba(0, 180, 216, 0.3)' },
+                            '100%': { boxShadow: '0 0 30px rgba(0, 180, 216, 0.7)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Custom scrollbar and glassmorphism helpers */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a1128;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0077b6;
+            border-radius: 4px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-card-light {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 180, 216, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-dental-dark text-slate-100 font-sans antialiased selection:bg-dental-500 selection:text-white">
+
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-white/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-dental-500 to-dental-650 flex items-center justify-center text-white shadow-lg shadow-dental-500/30 animate-glow">
+                    <i class="fa-solid fa-tooth text-xl"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-extrabold tracking-wider bg-gradient-to-r from-white via-dental-100 to-dental-500 bg-clip-text text-transparent">EIGHTEETH</span>
+                    <span class="block text-xs font-semibold tracking-widest text-dental-500 uppercase">Pakistan Distributor</span>
+                </div>
+            </div>
+
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#hero" class="hover:text-dental-500 transition-colors">Home</a>
+                <a href="#showcase" class="hover:text-dental-500 transition-colors">Clinical Showcase</a>
+                <a href="#products" class="hover:text-dental-500 transition-colors">Products</a>
+                <a href="#notes" class="hover:text-dental-500 transition-colors">Customer Notes</a>
+                <a href="#contact" class="hover:text-dental-500 transition-colors">Location & Contact</a>
+            </div>
+
+            <!-- Action Button -->
+            <div class="hidden md:block">
+                <a href="#contact" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-dental-500 to-dental-650 text-white font-medium text-sm shadow-lg shadow-dental-500/30 hover:shadow-dental-500/50 hover:scale-105 transition-all duration-300">
+                    <i class="fa-solid fa-phone-volume mr-2"></i> Get in Touch
+                </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="text-slate-300 hover:text-white focus:outline-none p-2">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-card border-t border-white/10 px-6 py-4 space-y-3">
+            <a href="#hero" class="block text-base hover:text-dental-500 py-1">Home</a>
+            <a href="#showcase" class="block text-base hover:text-dental-500 py-1">Clinical Showcase</a>
+            <a href="#products" class="block text-base hover:text-dental-500 py-1">Products</a>
+            <a href="#notes" class="block text-base hover:text-dental-500 py-1">Customer Notes</a>
+            <a href="#contact" class="block text-base hover:text-dental-500 py-1">Location & Contact</a>
+        </div>
+    </nav>
+
+    <section id="hero" class="relative min-h-screen flex items-center justify-center pt-28 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <!-- Background glowing blobs -->
+        <div class="absolute top-1/4 left-10 w-72 h-72 bg-dental-500/20 rounded-full blur-3xl pointer-events-none animate-pulse-slow"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-dental-650/15 rounded-full blur-3xl pointer-events-none animate-pulse-slow"></div>
+
+        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full glass-card border border-dental-500/30 text-dental-100 text-xs sm:text-sm font-semibold tracking-wide">
+                    <span class="w-2 h-2 rounded-full bg-dental-500 animate-ping"></span>
+                    <span>Exclusive Authorized Distributor in Pakistan</span>
+                </div>
+                
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight">
+                    Precision <span class="bg-gradient-to-r from-dental-100 via-dental-500 to-dental-650 bg-clip-text text-transparent">Endodontics</span> & Dental Innovation
+                </h1>
+                
+                <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                    EIGHTEETH Pakistan brings state-of-the-art Chinese dental manufacturing excellence straight to Pakistani dental clinics. Elevating root canal precision, apex tracking, and obturation with world-class clinical reliability.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                    <a href="#products" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-dental-500 to-dental-650 text-white font-semibold shadow-xl shadow-dental-500/30 hover:scale-105 transition-all duration-300 text-center">
+                        Explore Equipment <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="#showcase" class="w-full sm:w-auto px-8 py-4 rounded-xl glass-card text-white font-semibold hover:bg-white/10 transition-all duration-300 text-center">
+                        View Before / After <i class="fa-solid fa-sliders ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Quick stats -->
+                <div class="grid grid-cols-3 gap-4 pt-8 border-t border-white/10 max-w-lg mx-auto lg:mx-0">
+                    <div>
+                        <div class="text-2xl sm:text-3xl font-extrabold text-dental-500">100%</div>
+                        <div class="text-xs text-slate-400 mt-1">Authentic Tech</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl sm:text-3xl font-extrabold text-dental-500"> Lahore</div>
+                        <div class="text-xs text-slate-400 mt-1">Headquarters Hub</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl sm:text-3xl font-extrabold text-dental-500">24/7</div>
+                        <div class="text-xs text-slate-400 mt-1">Clinical Support</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 relative flex justify-center">
+                <div class="relative w-full max-w-md animate-float">
+                    <!-- Glassmorphism interactive device card mockup -->
+                    <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-2xl border border-white/20 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-dental-500/10 rounded-full blur-xl"></div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="px-3 py-1 bg-dental-500/20 text-dental-500 text-xs font-bold rounded-lg uppercase tracking-wider">Featured Flagship</span>
+                            <i class="fa-solid fa-microchip text-dental-500 text-2xl"></i>
+                        </div>
+                        <div class="h-48 sm:h-56 rounded-2xl bg-gradient-to-br from-dental-dark to-slate-900 flex items-center justify-center p-6 border border-white/10 relative overflow-hidden group">
+                            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-dental-500/20 via-transparent to-transparent"></div>
+                            <div class="text-center relative z-10">
+                                <i class="fa-solid fa-tooth text-6xl text-dental-500 mb-4 group-hover:scale-110 transition-transform duration-300"></i>
+                                <div class="text-lg font-bold">E-Pex & E-Connect Pro</div>
+                                <div class="text-xs text-slate-400">Integrated Apex Locator & Endomotor</div>
+                            </div>
+                        </div>
+                        <div class="mt-6 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-slate-400">Precision Rating</span>
+                                <div class="text-sm font-semibold text-emerald-400"><i class="fa-solid fa-circle-check mr-1"></i> 99.8% Accuracy</div>
+                            </div>
+                            <a href="#products" class="px-4 py-2 rounded-lg bg-dental-500/20 text-dental-500 hover:bg-dental-500 hover:text-white transition-all text-sm font-medium">Specs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="showcase" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-dental-500 text-sm font-bold uppercase tracking-widest">Clinical Excellence</span>
+            <h2 class="text-3xl sm:text-5xl font-extrabold mt-2 tracking-tight">Before & After Showcase</h2>
+            <p class="text-slate-400 mt-4 text-base sm:text-lg">Experience the revolutionary precision of EIGHTEETH endodontic systems through real clinical comparisons. Drag or slide to contrast cases.</p>
+        </div>
+
+        <!-- Interactive Before/After Component -->
+        <div class="max-w-4xl mx-auto glass-card rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden border border-white/10">
+            <!-- Tabs for different cases -->
+            <div class="flex justify-center space-x-2 sm:space-x-4 mb-8">
+                <button onclick="switchCase(0)" id="case-btn-0" class="px-4 sm:px-6 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-dental-500 text-white shadow-lg shadow-dental-500/30">Case 1: Molar RCT</button>
+                <button onclick="switchCase(1)" id="case-btn-1" class="px-4 sm:px-6 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-white/5 text-slate-300 hover:bg-white/10">Case 2: Rotary Shaping</button>
+                <button onclick="switchCase(2)" id="case-btn-2" class="px-4 sm:px-6 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-white/5 text-slate-300 hover:bg-white/10">Case 3: Obturation Fill</button>
+            </div>
+
+            <!-- Slider Wrapper -->
+            <div id="slider-container" class="relative h-[320px] sm:h-[420px] rounded-2xl overflow-hidden select-none cursor-ew-resize">
+                <!-- AFTER IMAGE (Background) -->
+                <div class="absolute inset-0 bg-slate-900 flex flex-col items-center justify-center">
+                    <!-- Simulated high-tech radiographic clean after view -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-emerald-950/40 via-dental-dark to-slate-900"></div>
+                    <div class="relative z-10 text-center p-6">
+                        <div class="w-20 h-20 mx-auto mb-4 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 text-3xl shadow-lg">
+                            <i class="fa-solid fa-tooth"></i>
+                        </div>
+                        <h3 id="after-title" class="text-2xl font-bold text-emerald-400">Post-Op: Hermetic Sealed Obturation</h3>
+                        <p id="after-desc" class="text-slate-300 text-sm max-w-md mx-auto mt-2">Smooth continuous conical taper achieved using EIGHTEETH NiTi files with zero ledge formation or transportation.</p>
+                        <span class="inline-block mt-4 px-3 py-1 bg-emerald-500/20 text-emerald-300 text-xs font-bold rounded-full">AFTER TREATMENT</span>
+                    </div>
+                </div>
+
+                <!-- BEFORE IMAGE (Foreground with clip-path) -->
+                <div id="before-layer" class="absolute inset-y-0 left-0 w-1/2 bg-slate-950 flex flex-col items-center justify-center overflow-hidden border-r-2 border-dental-500 transition-all duration-75">
+                    <!-- Simulated calcified/problematic before view -->
+                    <div class="absolute inset-0 w-[800px] h-full bg-gradient-to-tr from-amber-950/40 via-slate-950 to-dental-dark flex flex-col items-center justify-center p-6" id="before-inner-content">
+                        <div class="w-20 h-20 mx-auto mb-4 rounded-2xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400 text-3xl shadow-lg">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
+                        <h3 id="before-title" class="text-2xl font-bold text-amber-400">Pre-Op: Calcified Molar Canals</h3>
+                        <p id="before-desc" class="text-slate-300 text-sm max-w-md mx-auto mt-2">Severe pulp calcification and curved MB2 canal presenting high risk of instrument separation.</p>
+                        <span class="inline-block mt-4 px-3 py-1 bg-amber-500/20 text-amber-300 text-xs font-bold rounded-full">BEFORE TREATMENT</span>
+                    </div>
+                </div>
+
+                <!-- Handle / Divider -->
+                <div id="slider-handle" class="absolute inset-y-0 left-1/2 -translate-x-1/2 w-1 bg-dental-500 pointer-events-none flex items-center justify-center shadow-lg">
+                    <div class="w-8 h-8 rounded-full bg-dental-500 text-white flex items-center justify-center shadow-xl border-2 border-white">
+                        <i class="fa-solid fa-arrows-left-right text-xs"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <p class="text-xs text-slate-400"><i class="fa-solid fa-hand-pointer mr-1"></i> Click or drag horizontally across the viewer to inspect before vs after clinical outcomes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-dental-500 text-sm font-bold uppercase tracking-widest">Cutting-Edge Equipment</span>
+            <h2 class="text-3xl sm:text-5xl font-extrabold mt-2 tracking-tight">Advanced Dental Solutions</h2>
+            <p class="text-slate-400 mt-4 text-base sm:text-lg">Equipping Pakistani dental surgeons with industry-leading technology engineered for absolute precision and patient comfort.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Product 1 -->
+            <div class="glass-card rounded-3xl p-6 flex flex-col justify-between hover:border-dental-500/50 transition-all duration-300 group">
+                <div>
+                    <div class="h-44 rounded-2xl bg-gradient-to-br from-dental-500/10 to-dental-650/20 flex items-center justify-center mb-6 border border-white/10 group-hover:scale-[1.02] transition-transform">
+                        <i class="fa-solid fa-wand-magic-sparkles text-5xl text-dental-500"></i>
+                    </div>
+                    <span class="text-xs font-semibold text-dental-500 uppercase tracking-wider">Endodontics</span>
+                    <h3 class="text-xl font-bold mt-1">E-Connect Pro</h3>
+                    <p class="text-slate-400 text-sm mt-2">Wireless Endodontic Motor with built-in apex locator, adjustable reciprocating angles, and high torque stability.</p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+                    <span class="text-xs text-emerald-400 font-medium"><i class="fa-solid fa-check mr-1"></i> In Stock in Lahore</span>
+                    <button onclick="openProductModal('E-Connect Pro', 'Wireless Endodontic Motor with integrated apex locator.', 'Advanced cordless endo motor featuring precise torque control and customizable reciprocating angles.')" class="px-3 py-1.5 rounded-lg bg-dental-500/20 text-dental-500 hover:bg-dental-500 hover:text-white transition-all text-xs font-semibold">Details</button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="glass-card rounded-3xl p-6 flex flex-col justify-between hover:border-dental-500/50 transition-all duration-300 group">
+                <div>
+                    <div class="h-44 rounded-2xl bg-gradient-to-br from-dental-500/10 to-dental-650/20 flex items-center justify-center mb-6 border border-white/10 group-hover:scale-[1.02] transition-transform">
+                        <i class="fa-solid fa-compass-drafting text-5xl text-dental-500"></i>
+                    </div>
+                    <span class="text-xs font-semibold text-dental-500 uppercase tracking-wider">Apex Detection</span>
+                    <h3 class="text-xl font-bold mt-1">E-Pex 5 Apex Locator</h3>
+                    <p class="text-slate-400 text-sm mt-2">Multi-frequency apex locator with clear 3.5" LCD color display and high accuracy in wet or dry canals.</p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+                    <span class="text-xs text-emerald-400 font-medium"><i class="fa-solid fa-check mr-1"></i> In Stock in Lahore</span>
+                    <button onclick="openProductModal('E-Pex 5 Apex Locator', 'Multi-frequency electronic apex locator.', 'Advanced multi-frequency technology guarantees exact working length determination under any canal condition.')" class="px-3 py-1.5 rounded-lg bg-dental-500/20 text-dental-500 hover:bg-dental-500 hover:text-white transition-all text-xs font-semibold">Details</button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="glass-card rounded-3xl p-6 flex flex-col justify-between hover:border-dental-500/50 transition-all duration-300 group">
+                <div>
+                    <div class="h-44 rounded-2xl bg-gradient-to-br from-dental-500/10 to-dental-650/20 flex items-center justify-center mb-6 border border-white/10 group-hover:scale-[1.02] transition-transform">
+                        <i class="fa-solid fa-syringe text-5xl text-dental-500"></i>
+                    </div>
+                    <span class="text-xs font-semibold text-dental-500 uppercase tracking-wider">Obturation System</span>
+                    <h3 class="text-xl font-bold mt-1">Fire-Flow Obturation</h3>
+                    <p class="text-slate-400 text-sm mt-2">Fast heating cordless gutta percha obturation pen and gun set for 3D hermetic sealing of root canals.</p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+                    <span class="text-xs text-emerald-400 font-medium"><i class="fa-solid fa-check mr-1"></i> In Stock in Lahore</span>
+                    <button onclick="openProductModal('Fire-Flow Obturation', 'Cordless gutta percha obturation system.', 'Rapid heating technology with digital temperature regulation for precise vertical compaction and backfill.')" class="px-3 py-1.5 rounded-lg bg-dental-500/20 text-dental-500 hover:bg-dental-500 hover:text-white transition-all text-xs font-semibold">Details</button>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="glass-card rounded-3xl p-6 flex flex-col justify-between hover:border-dental-500/50 transition-all duration-300 group">
+                <div>
+                    <div class="h-44 rounded-2xl bg-gradient-to-br from-dental-500/10 to-dental-650/20 flex items-center justify-center mb-6 border border-white/10 group-hover:scale-[1.02] transition-transform">
+                        <i class="fa-solid fa-x-ray text-5xl text-dental-500"></i>
+                    </div>
+                    <span class="text-xs font-semibold text-dental-500 uppercase tracking-wider">Imaging & Sensors</span>
+                    <h3 class="text-xl font-bold mt-1">Nano-Ray & Sensors</h3>
+                    <p class="text-slate-400 text-sm mt-2">High-definition portable dental X-ray units and CMOS RVG sensors delivering ultra-low radiation diagnostic clarity.</p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+                    <span class="text-xs text-emerald-400 font-medium"><i class="fa-solid fa-check mr-1"></i> In Stock in Lahore</span>
+                    <button onclick="openProductModal('Nano-Ray & Sensors', 'High-definition portable X-Ray & RVG sensors.', 'Ultra-sharp resolution imaging with ergonomic sensor design and seamless software integration for clinics.')" class="px-3 py-1.5 rounded-lg bg-dental-500/20 text-dental-500 hover:bg-dental-500 hover:text-white transition-all text-xs font-semibold">Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="notes" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-dental-500 text-sm font-bold uppercase tracking-widest">Client Interaction Hub</span>
+            <h2 class="text-3xl sm:text-5xl font-extrabold mt-2 tracking-tight">Customer & Practice Notes</h2>
+            <p class="text-slate-400 mt-4 text-base sm:text-lg">Are you a dentist or clinic partner in Pakistan? Add consultation or equipment inquiry notes to your local workspace session instantly.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <!-- Add Note Form -->
+            <div class="lg:col-span-5 glass-card rounded-3xl p-6 sm:p-8 shadow-2xl border border-white/10">
+                <h3 class="text-xl font-bold mb-4 flex items-center">
+                    <i class="fa-solid fa-pen-to-square text-dental-500 mr-2"></i> Add New Customer Note
+                </h3>
+                <form id="note-form" onsubmit="saveCustomerNote(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1">Doctor / Clinic Name</label>
+                        <input type="text" id="note-author" required placeholder="e.g. Dr. Ahmed Khan (Lahore Dental Care)" class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-white focus:outline-none focus:border-dental-500 transition-all text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1">Inquiry / Service Category</label>
+                        <select id="note-category" class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-white focus:outline-none focus:border-dental-500 transition-all text-sm">
+                            <option value="Endodontic Equipment">Endodontic Equipment Inquiry</option>
+                            <option value="Maintenance & Repair">Maintenance & Service Request</option>
+                            <option value="Clinical Demo Booking">Clinical Demo Booking</option>
+                            <option value="General Consultation">General Consultation</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1">Note Details & Requirements</label>
+                        <textarea id="note-content" required rows="4" placeholder="Enter equipment models, preferred delivery time, or clinical questions..." class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-white focus:outline-none focus:border-dental-500 transition-all text-sm"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-dental-500 to-dental-650 text-white font-semibold shadow-lg shadow-dental-500/30 hover:scale-[1.01] transition-all text-sm">
+                        <i class="fa-solid fa-floppy-disk mr-2"></i> Save Customer Note
+                    </button>
+                </form>
+            </div>
+
+            <!-- Notes List / Log -->
+            <div class="lg:col-span-7 glass-card rounded-3xl p-6 sm:p-8 shadow-2xl border border-white/10">
+                <div class="flex items-center justify-between mb-6">
+                    <h3 class="text-xl font-bold flex items-center">
+                        <i class="fa-solid fa-clipboard-list text-dental-500 mr-2"></i> Active Session Notes Log
+                    </h3>
+                    <span id="note-count" class="px-3 py-1 rounded-full bg-dental-500/20 text-dental-500 text-xs font-bold">0 Notes</span>
+                </div>
+
+                <div id="notes-container" class="space-y-4 max-h-[450px] overflow-y-auto pr-2">
+                    <!-- Dynamically populated via JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-dental-500 text-sm font-bold uppercase tracking-widest">Connect With Us</span>
+            <h2 class="text-3xl sm:text-5xl font-extrabold mt-2 tracking-tight">Visit Our Lahore Office</h2>
+            <p class="text-slate-400 mt-4 text-base sm:text-lg">Official distribution hub and customer support center for EIGHTEETH in Pakistan.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <!-- Contact Info & Address Card -->
+            <div class="lg:col-span-6 glass-card rounded-3xl p-8 shadow-2xl border border-white/10 space-y-6">
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 rounded-2xl bg-dental-500/20 text-dental-500 flex items-center justify-center text-xl shrink-0 mt-1">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold">EIGHTEETH Pakistan Headquarters</h4>
+                        <p class="text-slate-300 text-sm mt-1">G9WG+FVQ, Dhaka Rd, Saddar Town, Lahore, Pakistan</p>
+                        <a href="https://maps.google.com/?q=G9WG+FVQ+Dhaka+Rd+Saddar+Town+Lahore+Pakistan" target="_blank" class="inline-flex items-center text-xs font-semibold text-dental-500 hover:text-dental-100 mt-2">
+                            <i class="fa-solid fa-map-location-dot mr-1.5"></i> Open in Google Maps
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 rounded-2xl bg-dental-500/20 text-dental-500 flex items-center justify-center text-xl shrink-0 mt-1">
+                        <i class="fa-solid fa-phone-volume"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold">Direct Distributor Helpline</h4>
+                        <p class="text-slate-300 text-sm mt-1">+92 (42) 3500-EIGHT / +92 300 0001818</p>
+                        <span class="text-xs text-emerald-400 mt-1 block"><i class="fa-solid fa-circle-check mr-1"></i> Mon - Sat: 9:00 AM - 6:00 PM PKT</span>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 rounded-2xl bg-dental-500/20 text-dental-500 flex items-center justify-center text-xl shrink-0 mt-1">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold">Email Support</h4>
+                        <p class="text-slate-300 text-sm mt-1">pakistan@eighteeth.com / sales@eighteethpk.com</p>
+                        <span class="text-xs text-slate-400 mt-1 block">Response within 2 hours</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Inquiry Form -->
+            <div class="lg:col-span-6 glass-card rounded-3xl p-8 shadow-2xl border border-white/10">
+                <h3 class="text-2xl font-bold mb-6">Send an Inquiry</h3>
+                <form onsubmit="submitInquiry(event)" class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1">Your Name</label>
+                            <input type="text" required placeholder="Dr. Ali Raza" class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-white focus:outline-none focus:border-dental-500 text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1">Phone Number</label>
+                            <input type="tel" required placeholder="+92 300 1234567" class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-white focus:outline-none focus:border-dental-500 text-sm">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1">Clinic / Hospital Name</label>
+                        <input type="text" required placeholder="Lahore Dental Aesthetics" class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-white focus:outline-none focus:border-dental-500 text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1">Message / Equipment Interest</label>
+                        <textarea required rows="4" placeholder="I would like to inquire about E-Connect Pro pricing and demo..." class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-white focus:outline-none focus:border-dental-500 text-sm"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-dental-500 to-dental-650 text-white font-semibold shadow-xl shadow-dental-500/30 hover:scale-[1.01] transition-all text-sm">
+                        <i class="fa-solid fa-paper-plane mr-2"></i> Submit Inquiry
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="glass-card border-t border-white/10 py-12 px-4 sm:px-6 lg:px-8 mt-20">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-dental-500 to-dental-650 flex items-center justify-center text-white shadow-lg">
+                    <i class="fa-solid fa-tooth text-xl"></i>
+                </div>
+                <div>
+                    <span class="text-lg font-extrabold tracking-wider text-white">EIGHTEETH PAKISTAN</span>
+                    <span class="block text-xs text-slate-400">Professional Dental Manufacturer Distributor</span>
+                </div>
+            </div>
+            <div class="text-xs text-slate-400 max-w-md">
+                &copy; 2026 EIGHTEETH Pakistan. All rights reserved. Authorized distributor of advanced dental machinery and clinical solutions from China.
+            </div>
+            <div class="flex space-x-4 text-dental-500 text-lg">
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Detail Modal -->
+    <div id="product-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+        <div class="glass-card rounded-3xl max-w-lg w-full p-6 sm:p-8 relative border border-white/20 shadow-2xl">
+            <button onclick="closeProductModal()" class="absolute top-6 right-6 text-slate-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="w-16 h-16 rounded-2xl bg-dental-500/20 text-dental-500 flex items-center justify-center text-2xl mb-4">
+                <i class="fa-solid fa-tooth"></i>
+            </div>
+            <h3 id="modal-title" class="text-2xl font-bold mb-2">Product Title</h3>
+            <p id="modal-subtitle" class="text-xs font-semibold text-dental-500 uppercase tracking-wider mb-4">Subtitle</p>
+            <p id="modal-desc" class="text-slate-300 text-sm leading-relaxed mb-6">Detailed description goes here...</p>
+            <div class="p-4 rounded-xl bg-dental-500/10 border border-dental-500/30 mb-6">
+                <div class="text-xs text-dental-400 font-semibold uppercase">Pakistan Distribution Benefit</div>
+                <div class="text-sm text-slate-200 mt-1">Includes 1-year local warranty, professional installation, and complimentary staff clinical training in Lahore.</div>
+            </div>
+            <div class="flex gap-4">
+                <button onclick="closeProductModal(); location.href='#contact';" class="flex-1 py-3 rounded-xl bg-gradient-to-r from-dental-500 to-dental-650 text-white font-semibold text-sm shadow-lg shadow-dental-500/30">Order / Inquire Now</button>
+                <button onclick="closeProductModal()" class="px-6 py-3 rounded-xl glass-card text-slate-300 font-semibold text-sm">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-32 opacity-0 transition-all duration-300 glass-card bg-slate-900/95 border border-dental-500/50 px-6 py-4 rounded-2xl shadow-2xl flex items-center space-x-3">
+        <div class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+            <i class="fa-solid fa-check text-sm"></i>
+        </div>
+        <div>
+            <div id="toast-title" class="text-sm font-bold text-white">Success!</div>
+            <div id="toast-desc" class="text-xs text-slate-300">Action completed successfully.</div>
+        </div>
+    </div>
+
+    <script>
+        
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Before / After Slider Logic
+        const sliderContainer = document.getElementById('slider-container');
+        const beforeLayer = document.getElementById('before-layer');
+        const sliderHandle = document.getElementById('slider-handle');
+
+        const casesData = [
+            {
+                beforeTitle: "Pre-Op: Calcified Molar Canals",
+                beforeDesc: "Severe pulp calcification and curved MB2 canal presenting high risk of instrument separation.",
+                afterTitle: "Post-Op: Hermetic Sealed Obturation",
+                afterDesc: "Smooth continuous conical taper achieved using EIGHTEETH NiTi files with zero ledge formation or transportation."
+            },
+            {
+                beforeTitle: "Pre-Op: Necrotic Pulp & Lesion",
+                beforeDesc: "Large periapical radiolucency with necrotic infected root canal anatomy.",
+                afterTitle: "Post-Op: Complete 3D Cleaning & Fill",
+                afterDesc: "Disinfected thoroughly with active irrigation and obturated accurately to physiological terminus."
+            },
+            {
+                beforeTitle: "Pre-Op: S-Shaped Curved Root",
+                beforeDesc: "Complex double curvature in distal root requiring extreme flexibility and fracture resistance.",
+                afterTitle: "Post-Op: Preserved Canal Pathway",
+                afterDesc: "Managed expertly with EIGHTEETH heat-treated rotary files maintaining original anatomical pathway."
+            }
+        ];
+
+        let currentCaseIndex = 0;
+
+        function switchCase(index) {
+            currentCaseIndex = index;
+            for(let i=0; i<3; i++) {
+                const btn = document.getElementById(`case-btn-${i}`);
+                if(i === index) {
+                    btn.className = "px-4 sm:px-6 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-dental-500 text-white shadow-lg shadow-dental-500/30";
+                } else {
+                    btn.className = "px-4 sm:px-6 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-white/5 text-slate-300 hover:bg-white/10";
+                }
+            }
+            document.getElementById('before-title').innerText = casesData[index].beforeTitle;
+            document.getElementById('before-desc').innerText = casesData[index].beforeDesc;
+            document.getElementById('after-title').innerText = casesData[index].afterTitle;
+            document.getElementById('after-desc').innerText = casesData[index].afterDesc;
+        }
+
+        function updateSlider(clientX) {
+            const rect = sliderContainer.getBoundingClientRect();
+            let x = clientX - rect.left;
+            if(x < 0) x = 0;
+            if(x > rect.width) x = rect.width;
+            let percentage = (x / rect.width) * 100;
+            beforeLayer.style.width = `${percentage}%`;
+            sliderHandle.style.left = `${percentage}%`;
+        }
+
+        sliderContainer.addEventListener('mousemove', (e) => {
+            updateSlider(e.clientX);
+        });
+
+        sliderContainer.addEventListener('touchmove', (e) => {
+            if(e.touches.length > 0) {
+                updateSlider(e.touches[0].clientX);
+            }
+        });
+
+        sliderContainer.addEventListener('click', (e) => {
+            updateSlider(e.clientX);
+        });
+
+        // Product Modal Logic
+        function openProductModal(title, subtitle, desc) {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-subtitle').innerText = subtitle;
+            document.getElementById('modal-desc').innerText = desc;
+            document.getElementById('product-modal').classList.remove('hidden');
+            document.getElementById('product-modal').classList.add('flex');
+        }
+
+        function closeProductModal() {
+            document.getElementById('product-modal').classList.remove('flex');
+            document.getElementById('product-modal').classList.add('hidden');
+        }
+
+        // Toast notification helper
+        function showToast(title, desc) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-title').innerText = title;
+            document.getElementById('toast-desc').innerText = desc;
+            toast.classList.remove('translate-y-32', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-32', 'opacity-0');
+            }, 4000);
+        }
+
+        // Customer Notes / LocalStorage Manager
+        let customerNotes = JSON.parse(localStorage.getItem('eighteeth_pk_notes')) || [
+            {
+                id: 1,
+                author: "Dr. Farooq Shaukat (Lahore)",
+                category: "Endodontic Equipment",
+                content: "Inquired about E-Connect Pro batch availability and bulk clinic delivery in Gulberg.",
+                date: "Sep 28, 2026"
+            },
+            {
+                id: 2,
+                author: "Dr. Ayesha Malik (Model Town)",
+                category: "Clinical Demo Booking",
+                content: "Requested live clinic demonstration for Fire-Flow obturation system.",
+                date: "Sep 26, 2026"
+            }
+        ];
+
+        function renderNotes() {
+            const container = document.getElementById('notes-container');
+            document.getElementById('note-count').innerText = `${customerNotes.length} Notes`;
+            
+            if(customerNotes.length === 0) {
+                container.innerHTML = `<div class="text-center py-8 text-slate-500 text-sm">No customer notes saved in local session yet. Add one using the form!</div>`;
+                return;
+            }
+
+            container.innerHTML = customerNotes.map((note, idx) => `
+                <div class="p-4 rounded-2xl bg-slate-900/60 border border-white/10 relative group hover:border-dental-500/40 transition-all">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-bold text-dental-500 uppercase tracking-wider">${note.category}</span>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-[10px] text-slate-400">${note.date}</span>
+                            <button onclick="deleteNote(${note.id})" class="text-slate-500 hover:text-red-400 text-xs"><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </div>
+                    <h4 class="text-sm font-bold text-white mb-1"><i class="fa-solid fa-user-doctor mr-1.5 text-dental-400"></i> ${note.author}</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">${note.content}</p>
+                </div>
+            `).join('');
+        }
+
+        function saveCustomerNote(e) {
+            e.preventDefault();
+            const author = document.getElementById('note-author').value;
+            const category = document.getElementById('note-category').value;
+            const content = document.getElementById('note-content').value;
+            
+            const newNote = {
+                id: Date.now(),
+                author,
+                category,
+                content,
+                date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+            };
+
+            customerNotes.unshift(newNote);
+            localStorage.setItem('eighteeth_pk_notes', JSON.stringify(customerNotes));
+            renderNotes();
+            document.getElementById('note-form').reset();
+            showToast('Note Saved!', 'Customer note successfully added to local session storage.');
+        }
+
+        function deleteNote(id) {
+            customerNotes = customerNotes.filter(n => n.id !== id);
+            localStorage.setItem('eighteeth_pk_notes', JSON.stringify(customerNotes));
+            renderNotes();
+            showToast('Note Removed', 'Customer note has been deleted.');
+        }
+
+        function submitInquiry(e) {
+            e.preventDefault();
+            showToast('Inquiry Submitted!', 'Our Lahore team will contact you within 2 hours.');
+            e.target.reset();
+        }
+
+        // Initialize notes on load
+        renderNotes();
+    </script>
+</body>
+</html>
